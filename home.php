@@ -1,5 +1,5 @@
 <?php 
-get_header(); // Laddar in din header.php
+get_header(); // Laddar in  header.php
 ?>
 
 <section class="news-page-hero">
