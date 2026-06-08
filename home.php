@@ -1,5 +1,5 @@
 <?php 
-get_header(); // Laddar in  header.php
+get_header(); // Laddar in header.php
 ?>
 
 <section class="news-page-hero">
@@ -52,24 +52,17 @@ get_header(); // Laddar in  header.php
                         <span><?php echo get_the_date(); ?></span>
                     </div>
                     
-                    <h3><?php the_title(); ?></h3>
-                    
-                    <p><?php the_excerpt(); ?></p>
-                    
-                    <a href="<?php the_permalink(); ?>" class="arrow-link">Läs hela artikeln &rarr;</a>
+                    <h2><?php the_title(); ?></h2> <?php the_excerpt(); ?> <a href="<?php the_permalink(); ?>" class="arrow-link">Läs hela artikeln &rarr;</a>
                 </div>
 
             <?php 
             endwhile;
-            wp_reset_postdata(); //  Återställer huvudloopen efter vår anpassade query
+            wp_reset_postdata(); // Återställer huvudloopen efter vår anpassade query
         else :
             echo '<p style="grid-column: 1/-1; text-align: center;">Inga nyheter hittades. Skapa inlägg med kategorin "nyheter" i WP-admin.</p>';
         endif;
         ?>
 
-    </div>
-</section>
-
-<?php 
-get_footer(); // Laddar in  footer.php
+    </div> </section> <?php 
+get_footer(); // Laddar in footer.php
 ?>

@@ -151,6 +151,13 @@ body {
 .events-section {
     padding: 30px 0;
 }
+/* Centrerar sektionsrubriken för Aktiviteter & Erbjudanden */
+.events-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #3E4A3F;
+}
 
 .event-card {
     background-color: #DCE3D3; 
@@ -176,11 +183,15 @@ body {
     display: block;
 }
 
-.event-card h3, .news-card h3 {
+.event-card h3, .event-card h2, .news-card h3, .news-card h2 {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
+/* Lägg till detta precis under för att tvinga startsidans puff-rubriker till mitten: */
+.event-card h2, .event-card h3 {
+    text-align: center;
+}
 .event-card p, .news-card p {
     font-size: 13px;
     margin-bottom: 15px;
@@ -202,7 +213,9 @@ body {
     padding-left: 8%;
     margin-bottom: 25px;
     font-size: 24px;
+    text-align: center;
 }
+
 
 .news-card {
     background-color: #DCE3D3;
@@ -495,10 +508,11 @@ body {
     object-fit: cover;
 }
 
-.feed-card h3 {
+.feed-card h3, .feed-card h2 {
     font-size: 22px;
     margin: 10px 0;
     color: #3E4A3F;
+    text-align: center;
 }
 
 .feed-card p {
@@ -594,7 +608,7 @@ body {
 }
 
 .booking-hero-content {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('./bilder/boka_hero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('./bilder/about_oss_hero_image.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

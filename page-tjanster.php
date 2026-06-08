@@ -54,7 +54,7 @@ get_header(); // Laddar in header.php (med meny och logotyp)
             echo '<p style="text-align: center;">Inga tjänster hittades. Skapa inlägg med kategorin "tjanster" i WP-admin.</p>';
         endif;
         ?>
-
+</div> </section>
 <?php 
 get_footer(); // Detta anrop sköter footern
 ?>

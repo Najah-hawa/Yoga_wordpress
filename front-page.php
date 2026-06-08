@@ -13,6 +13,7 @@ get_header(); // Laddar in din header.php
 <!-- puffar-SEKTION (Dynamisk loop) -->
 
 <section class="events-section">
+    <h2>Våra Aktiviteter & Erbjudanden</h2>
     <div class="scroll-container">
         
         <?php
@@ -82,7 +83,7 @@ get_header(); // Laddar in din header.php
                     
                     <h3><?php the_title(); ?></h3>
                     
-                    <p><?php the_excerpt(); ?></p>
+                    <?php the_excerpt(); ?>
                     
                     <a href="<?php the_permalink(); ?>" class="arrow-link">Läs mer &rarr;</a>
                 </div>

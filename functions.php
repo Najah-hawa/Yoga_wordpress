@@ -31,6 +31,10 @@ function yogastudio_theme_setup() {
     register_nav_menus(array(
         'main-menu' => __('Huvudmeny', 'yogastudiotheme'),
     ));
+    
+    // DEFINIERA BILDSTORLEKAR (Nytt för bildoptimering!)
+    add_image_size( 'puff-thumb', 400, 250, true ); 
+    add_image_size( 'news-thumb', 600, 400, false );
 }
 add_action('after_setup_theme', 'yogastudio_theme_setup');
 
@@ -46,3 +50,9 @@ function yogastudio_excerpt_more($more) {
     return '...';
 }
 add_filter('excerpt_more', 'yogastudio_excerpt_more');
+
+// OPTIMERA BILDCOMPRIMERING (Nytt för bildoptimering!)
+function yogastudio_custom_jpeg_quality( $quality ) {
+    return 80; // Sätter komprimeringsnivån till 80% (perfekt balans för webben)
+}
+add_filter( 'jpeg_quality', 'yogastudio_custom_jpeg_quality' );
